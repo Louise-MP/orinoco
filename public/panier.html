@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/panier.css">
+
+    <title>Orinoco</title>
+
+    <script type="text/javascript" src="js/panier.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="images/logo-new.png" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <a class="accueil" href="./index.html">Accueil</a>
+                <div>
+                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main-container">
+
+        <div class="items-container">
+            <div>
+                <h2>Articles dans votre panier</h2>
+            </div>
+
+            <div class="items">
+                <div>
+                    <img src="images/chair.jpg" alt="">
+                </div>
+
+                <div class="description">
+                    <p>Nom article</p>
+                    <p>Description</p>
+                    <p>Prix</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="resume-container">
+            <div class="items-resume">
+                <div>
+                    <h2>Résumé de la commande</h2>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <div class="number">
+                    <p>Nombre d'articles :</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="total">
+                    <p>Prix total :</p>
+                    <p>2500 €</p>
+                </div>
+            </div>
+                
+            <div class="form-container">
+                <form class="form" action=""> <!-- POST ou GET -->
+                    <label>Nom</label>
+                    <input type="text" name="nom" id="nom">
+
+                    <label>Prénom</label>
+                    <input type="text" name="prenom" id="prenom">
+
+                    <label>E-mail</label>
+                    <input type="email" name="email" id="email">
+
+                    <label>Adresse</label>
+                    <input type="text" name="adresse" id="adresse">
+
+                    <label>Ville</label>
+                    <input type="text" name="ville" id="ville">
+
+                    <input class="button" type="submit" value="Commander" name="submit" id="submit">
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div>
+            <a href="./index.html">
+                <img src="images/logo-new.png" alt="">
+            </a>
+        </div>
+        <div class="menu2">
+            <ul>
+                <li><p><a href="">Conditions générales</a></p></li>
+                <li><a href="./index.html">Accueil</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

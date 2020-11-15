@@ -1,0 +1,248 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* body */
+body {
+    width: 100%;
+    margin: auto;
+    height:100%;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    background-color: rgb(211, 208, 206);
+}
+
+
+/* nav */
+nav {
+    width: inherit;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: #000;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.menu {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu img {
+    width: 20px;
+}
+
+
+/* main-container */
+#main-container {
+    position: relative;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-sheet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+.product-inner {
+    width: 50%;
+    box-shadow: 0px 0px 10px 6px lightgrey;
+    padding: 20px;
+}
+
+.description-text p:last-of-type {
+    font-weight: bold;
+}
+
+.description-text {
+    line-height: 45px;
+}
+
+.description-text h2 {
+    font-size: 40px;
+}
+
+.select {
+    width: 30%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    line-height: 75px;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+#perso-select, #nombre-produit {
+    padding: 10px;
+}
+
+
+button {
+    padding: 15px 47px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(231, 231, 231);
+    border-radius: 2px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    width: inherit;
+    position:absolute;
+    background-color: rgb(211, 208, 206);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: #000;
+}
+
+footer img {
+    width: 200px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.menu2 {
+    width: 40%;
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+
+    .accueil {
+        display: none;
+    }
+
+    .product-sheet {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .product-inner {
+        width: 80%;
+        margin: auto;
+    }
+
+    .selected-product {
+        margin-bottom: 25px;
+    }
+
+    .menu2 {
+        display: none;
+    }
+
+    .select {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        line-height: 75px;
+    }
+
+    .description-text {
+        line-height: 65px;
+    }
+
+    .description-text h2 {
+        font-size: 30px;
+    }
+    
+}
+
+/* tablet */
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    #main-container {
+        height: 78vh;
+        padding: 0;
+    }
+
+    footer {
+        bottom: 0;
+    }
+
+}
