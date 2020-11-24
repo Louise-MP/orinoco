@@ -6,81 +6,69 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fiche-produit.css">
-
+    
+    <script type="text/javascript" src="js/fiche-produit.js" defer></script>
     <title>Orinoco</title>
 
-    <script type="text/javascript" src="js/fiche-produit.js"></script>
 </head>
 <body>
 
     <header>
         <nav>
             <div class="logo">
-                <a href="./index.html">
+                <a href="index.html">
                     <img src="images/logo-new.png" alt="">
                 </a>
             </div>
             <div class="menu">
-                <a class="accueil" href="./index.html">Accueil</a>
+                <a class="accueil" href="index.html">Accueil</a>
                 <div>
-                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt=""></a>
+                    <a href="panier.html"><img src="images/shopping-cart.svg" onclick='location.href="panier.html"' alt="" data-target="panier"></a>
                 </div>
             </div>
         </nav>
     </header>
 
     <section id="main-container">
-        
-        <div class="product-sheet">
-            <div class="selected-product">
-                <img src="images/chair.jpg" alt="">
-            </div>
-    
-            <div class="product-inner">
-                <div class="description-text">
-                    <h2>Nom du meuble</h2>
-                    <p>Description</p>
-                    <p>100€</p>
+
+        <h3 id="titre"></h3>
+        <div id="meuble">
+            <p id="prix"></p>
+            <p id="description"></p>
+            <label for="select">Sélectionner un vernis :</label>
+            <select name="vernis" id="varnish-select">
+            </select>
+            <label for="select">Sélectionner une quantité :</label>
+            <select name="number" id="nombreProduit">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <div class="section-ajout">
+                <div>
+                    <img  id= "image" src="" alt="table en bois">
                 </div>
-
-                <div class="select">
-
-                    <label for="select">Personnalisation :</label>
-                    <select name="Personnalisation" id="perso-select">
-                        <option value="">Personnalisation 1</option>
-                        <option value="">Personnalisation 2</option>
-                        <option value="">Personnalisation 3</option>
-                    </select>
-
-                    <label for="select">Quantité :</label>
-                    <select name="number" id="nombre-produit">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-
-                </div>
-
-                <button class="pointer">
+                <button id="btn-ajouter">
                     Ajouter au panier
                 </button>
             </div>
         </div>
-    
+
     </section>
 
     <footer>
         <div>
-            <a href="./index.html">
+            <a href="index.html">
                 <img src="images/logo-new.png" alt="">
             </a>
         </div>
         <div class="menu2">
             <ul>
                 <li><p><a href="">Conditions générales</a></p></li>
-                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
             </ul>
         </div>
     </footer>

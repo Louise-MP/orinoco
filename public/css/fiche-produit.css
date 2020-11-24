@@ -57,10 +57,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
-
 /* header */
 header {
     background-color: rgb(211, 208, 206);
@@ -69,7 +65,8 @@ header {
 
 /* nav */
 nav {
-    width: inherit;
+    width: 90%;
+    margin: auto;
     height: 100px;
     display: flex;
     justify-content: space-around;
@@ -78,10 +75,7 @@ nav {
 
 nav a {
     color: #000;
-}
-
-.logo img {
-    width: 200px;
+    text-decoration: none;
 }
 
 .menu {
@@ -94,9 +88,14 @@ nav a {
     width: 20px;
 }
 
+#image {
+    width: 450px;
+}
+
+/* ancien main-container */
 
 /* main-container */
-#main-container {
+/* #main-container {
     position: relative;
     padding: 100px 0px;
     display: flex;
@@ -147,17 +146,64 @@ label {
     padding: 10px;
 }
 
+#btn-ajouter {
+ 
+}
+*/
 
-button {
-    padding: 15px 47px;
-    font-size: 20px;
-    border: none;
-    background-color: rgb(231, 231, 231);
-    border-radius: 2px;
+
+
+/* nouveau main-container */
+
+
+#main-container {
+    line-height: 45px;
+    width: 90%;
+    margin: auto;
 }
 
-.pointer {
-    cursor: pointer;
+#titre {
+    margin: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#meuble {
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px 6px lightgrey;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#prix {
+    font-weight: bold;
+}
+
+#varnish-select {
+    padding: 5px;
+}
+
+#nombreProduit {
+    padding: 5px;
+}
+
+.section-ajout{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+} 
+
+#btn-ajouter {
+    padding: 10px;
+    margin-bottom: 30px;
+    height: fit-content;
+}
+
+#btn-panier {
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
 /* footer */
@@ -191,46 +237,18 @@ footer ul {
 /* mobile */
 @media only screen and (max-width: 600px) {
 
-    .accueil {
-        display: none;
-    }
-
-    .product-sheet {
-        width: 100%;
-        display: block;
+    #main-container {
         text-align: center;
     }
 
-    .product-inner {
-        width: 80%;
-        margin: auto;
-    }
-
-    .selected-product {
-        margin-bottom: 25px;
+    .accueil {
+        display: none;
     }
 
     .menu2 {
         display: none;
     }
 
-    .select {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        line-height: 75px;
-    }
-
-    .description-text {
-        line-height: 65px;
-    }
-
-    .description-text h2 {
-        font-size: 30px;
-    }
-    
 }
 
 /* tablet */
