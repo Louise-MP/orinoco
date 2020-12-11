@@ -9,7 +9,7 @@
 
     <title>Orinoco</title>
 
-    <script type="text/javascript" src="js/panier.js"></script>
+    <script type="text/javascript" src="js/panier.js" defer></script>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <div class="menu">
                 <a class="accueil" href="./index.html">Accueil</a>
                 <div>
-                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt=""></a>
+                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt="" data-target="panier"></a>
                 </div>
             </div>
         </nav>
@@ -36,21 +36,14 @@
                 <h2>Articles dans votre panier</h2>
             </div>
 
-            <div class="items">
-                <div>
-                    <img src="images/chair.jpg" alt="">
-                </div>
-
-                <div class="description">
-                    <p>Nom article</p>
-                    <p>Description</p>
-                    <p>Prix</p>
-                </div>
+            <div id="items">
+                <!-- Affichage du produit  -->
             </div>
 
         </div>
 
         <div class="resume-container">
+
             <div class="items-resume">
                 <div>
                     <h2>Résumé de la commande</h2>
@@ -58,13 +51,9 @@
             </div>
 
             <div class="total-price">
-                <div class="number">
-                    <p>Nombre d'articles :</p>
-                    <p>6 articles</p>
-                </div>
                 <div class="total">
                     <p>Prix total :</p>
-                    <p>2500 €</p>
+                    <p id="affichageTotal"></p>
                 </div>
             </div>
                 
@@ -106,5 +95,7 @@
         </div>
     </footer>
 
+   
 </body>
-</html>
+</html> 
+

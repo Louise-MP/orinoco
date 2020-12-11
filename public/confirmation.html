@@ -1,15 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/confirmation.css">
 
-    <title>orinoco</title>
-
-    <script type="text/javascript" src="js/confirmation.js"></script>
+    <title>Orinoco</title>
 </head>
 <body>
 
@@ -22,21 +19,20 @@
             </div>
             <div class="menu">
                 <div>
-                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt=""></a>
+                    <a href="./panier.html"><img src="images/shopping-cart.svg" alt="" data-target="panier"></a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section id="main-container">
+<section id="main-container">
 
-        <h2>Commande confirmée ! 🎉</h2>
-        <div>
-            <p>
-                Merci pour votre achat. Votre commande numéro <span>(id de commande)</span> d'un montant de <span>XXX € </span> a bien été enregistée.
-            </p>
-        </div>
-    </section>
+    <h3>Commande Confirmée 🎉</h3>
+    <div id="recapitulatif">
+
+    </div>
+
+</section>
 
     <footer>
         <div>
@@ -51,6 +47,7 @@
             </ul>
         </div>
     </footer>
-
+    
+    <script src="js/confirmation.js" defer></script>
 </body>
-</html>
+</html> 
