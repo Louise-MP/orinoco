@@ -117,21 +117,50 @@ nav a {
     font-weight: bold;
 }
 
-.items {
+#items {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
     padding: 15px;
+    margin-bottom: 1rem;
     box-shadow: 0px 0px 10px 6px lightgrey;
     border-radius: 2px;
 }
 
-.items img {
-    width: 100px;
+.product-title {
+
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+
 }
 
-.description {
-    padding-left: 50px;
-    line-height: 45px;
+.product-varnish {
+
+    font-weight: bolder;
+    margin-bottom: 1rem;
+
+}
+
+.product-description {
+
+    margin-bottom: 1rem;
+
+}
+
+.product-quantity {
+
+    margin-bottom: 1rem;
+
+}
+
+
+#items img {
+    width: 100px;
 }
 
 .description p:first-child, .description p:last-child {
@@ -208,7 +237,7 @@ input {
 
 /* footer */
 footer {
-    width: inherit;
+    width: 100%;
     position:absolute;
     background-color: rgb(211, 208, 206);
     display: flex;
@@ -320,10 +349,6 @@ footer ul {
 
 
 }
-
-
-
-
 
 
 @media (min-width: 1024px) and (max-width: 1366px) 

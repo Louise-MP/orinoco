@@ -1,4 +1,4 @@
-/* css reset */
+css reset
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,6 +47,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
 
 
 /* body */
@@ -102,12 +104,14 @@ nav a {
     justify-content: center;
     align-items: center;
     line-height: 65px;
+    font-weight: 200;
     font-size: 25px;
     height: 62vh;
 }
 
-#main-container h2 {
+#main-container h3 {
     font-size: 30px;
+    margin-bottom: 40px;
 }
 
 span {
@@ -124,6 +128,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     bottom: 0;
+    font-weight: 200;
 }
 
 footer a {
@@ -152,7 +157,7 @@ footer ul {
         line-height: 50px;
     }
 
-    #main-container h2 {
+    #main-container h3 {
         font-size: 25px;
     }
 
