@@ -1,11 +1,11 @@
 // Affichage du numéro de commande avec message de remerciement
 function commande(){
-    let data = JSON.parse(sessionStorage.getItem('order'));
-    let prix = JSON.parse(sessionStorage.getItem('prix'));
+    let data = JSON.parse(sessionStorage.getItem('order'))
+    let prix = JSON.parse(sessionStorage.getItem('prix'))
     let conteneurRecap = document.getElementById("recapitulatif")
 
     const p1 = document.createElement("p")
-    p1.textContent = "Merci pour votre achat " + data.contact.firstName + " " + data.contact.lastName
+    p1.textContent = "Merci pour votre achat " + data.contact.lastName + " " + data.contact.firstName
     recapitulatif.appendChild (p1)
 
     const p2 = document.createElement("p")
@@ -21,4 +21,4 @@ function commande(){
     console.log("Et le montant total : ")
     console.log(prix)
 }
-commande();
+commande()

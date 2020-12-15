@@ -25,7 +25,7 @@ fetch(url)
             const nodePrice = document.createTextNode (price + " €")
             const nodeDescription = document.createTextNode (description)
             img.src = imageUrl
-            lien.href = 'fiche-produit.html?id=' + _id;
+            lien.href = 'fiche-produit.html?id=' + _id
             lien.textContent = "Voir le produit"
 
             //j'ajoute les éléments que j'ai crée, au DOM (=> HTML)
@@ -45,6 +45,6 @@ fetch(url)
         })
     })
     .catch(err =>{
-        alert("Le serveur ne répond pas");
+        alert("Le serveur ne répond pas")
         console.error(err)
 })

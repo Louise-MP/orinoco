@@ -33,19 +33,19 @@ function affichageProduit() {
     const options = furniture.varnish
     options.forEach(function(element, vernis) {
         lesVernis[vernis] = new Option(element, element)
-    });
+    })
 
     // bouton voir le panier
     const voir_panier = document.getElementById("btn-panier")
     voir_panier.addEventListener("click", function() {
         window.location.href = "panier.html"
-    });
+    })
 
     //selection du varnish
     let selectionVernis = document.getElementById("varnish-select").addEventListener("change", function (e) {
-        selectionVernis = e.target.value;
+        selectionVernis = e.target.value
         console.log("Il sélectionne le vernis : " + e.target.value);
-    });
+    })
 
     // selection du nombre de produit
     let nombreProduit = document.getElementById("nombreProduit").addEventListener('change', function (e) {
@@ -73,35 +73,35 @@ function affichageProduit() {
 
 //j'enregistre le prix total dans sessionStorage pour le proposer dans la page panier et commande
 function prixTotal(){
-    let price = parseInt(furniture.price);
-    let prixDuPanier = JSON.parse(sessionStorage.getItem('prixTotal'));
+    let price = parseInt(furniture.price)
+    let prixDuPanier = JSON.parse(sessionStorage.getItem('prixTotal'))
     
     if(prixDuPanier != null){
-        sessionStorage.setItem("prixTotal", prixDuPanier + (price * furniture.quantity));
+        sessionStorage.setItem("prixTotal", prixDuPanier + (price * furniture.quantity))
     } else {
-        sessionStorage.setItem("prixTotal", price * furniture.quantity);
+        sessionStorage.setItem("prixTotal", price * furniture.quantity)
     }
 
 }
 
 function ajoutSessionStorage(){
-    let panier = sessionStorage.getItem('panier');
-    panier = JSON.parse(panier);
+    let panier = sessionStorage.getItem('panier')
+    panier = JSON.parse(panier)
 
-    let name = furniture.name + furniture.varnish;
+    let name = furniture.name + furniture.varnish
     if(panier != null){
         let elem = panier[name]
         if(elem === undefined) {
             panier = {...panier,  [name] : furniture}
         } else {
-            let quantity = parseInt(elem.quantity);
-            quantity += parseInt(furniture.quantity);
-            elem.quantity = quantity;
+            let quantity = parseInt(elem.quantity)
+            quantity += parseInt(furniture.quantity)
+            elem.quantity = quantity
         }
     } else {
         panier = {[name] : furniture}
 
     }
-    sessionStorage.setItem("panier", JSON.stringify(panier));
+    sessionStorage.setItem("panier", JSON.stringify(panier))
 }
 
