@@ -10,14 +10,12 @@ request.onreadystatechange = function () {
         furniture = JSON.parse(this.responseText)
         affichageProduit()
     }
-};
+}
 request.open("GET", "http://localhost:3000/api/furniture/" + id)
 request.send()
 
 // affichage du produit
 const affichageProduit = () => {
-
-
     console.log("Le nom du produit est " +furniture.name)
 
     const titre = document.getElementById("titre")
@@ -90,7 +88,7 @@ const ajoutSessionStorage = () => {
     panier = JSON.parse(panier)
 
     let name = furniture.name + furniture.varnish
-    if(panier != null){
+    if(panier != null) {
         let elem = panier[name]
         if(elem === undefined) {
             panier = {...panier,  [name] : furniture}

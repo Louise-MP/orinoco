@@ -21,7 +21,7 @@ const affichagePanier = () => {
         items.appendChild(div)
 
     } else  {
-        prixPanier.textContent = 'Le montant de votre commande est de : 0 €'
+        prixPanier.textContent = ' 0 €'
     }
 
     // s'il n'y pas de produit dans le panier on affiche un message
