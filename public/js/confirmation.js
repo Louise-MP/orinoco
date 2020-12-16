@@ -1,5 +1,5 @@
 // Affichage du numéro de commande avec message de remerciement
-function commande(){
+const commande = () => {
     let data = JSON.parse(sessionStorage.getItem('order'))
     let prix = JSON.parse(sessionStorage.getItem('prix'))
     let conteneurRecap = document.getElementById("recapitulatif")

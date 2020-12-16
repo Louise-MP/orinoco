@@ -1,7 +1,7 @@
 //////////////// PARTIE PRODUIT ////////////////
 
 //Affichage du produit
-function affichagePanier() {
+const affichagePanier = () => {
     //je récupére mon produit dans session storage "panier"
     let panier = JSON.parse(sessionStorage.getItem("panier"))
     let prixTotal = JSON.parse(sessionStorage.getItem("prixTotal"))
@@ -86,8 +86,7 @@ email.addEventListener('input', ({ target: { value } }) => {
     email.style.borderColor = "green"
 })
 
-
-function achat(e) {
+const achat = (e) => {
   e.preventDefault()
 // on créer une alerte si le panier est vide qui dit qu'on ne peut pas passer la commande  
   let panier = sessionStorage.getItem('panier')
@@ -103,7 +102,8 @@ function achat(e) {
  let products = []
 
  // on fait une fonction pour récupérer les id des produits au panier, pour l'afficher dans la requête POST
- function productId(products) {
+const productId = (products) => {
+
   let panier = JSON.parse(sessionStorage.getItem('panier'))
   
   products = Object.values(panier).map( (data) => {

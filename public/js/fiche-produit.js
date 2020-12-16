@@ -15,7 +15,8 @@ request.open("GET", "http://localhost:3000/api/furniture/" + id)
 request.send()
 
 // affichage du produit
-function affichageProduit() {
+const affichageProduit = () => {
+
 
     console.log("Le nom du produit est " +furniture.name)
 
@@ -72,11 +73,11 @@ function affichageProduit() {
 }
 
 //j'enregistre le prix total dans sessionStorage pour le proposer dans la page panier et commande
-function prixTotal(){
+const prixTotal = () => {
     let price = parseInt(furniture.price)
     let prixDuPanier = JSON.parse(sessionStorage.getItem('prixTotal'))
     
-    if(prixDuPanier != null){
+    if(prixDuPanier != null) {
         sessionStorage.setItem("prixTotal", prixDuPanier + (price * furniture.quantity))
     } else {
         sessionStorage.setItem("prixTotal", price * furniture.quantity)
@@ -84,7 +85,7 @@ function prixTotal(){
 
 }
 
-function ajoutSessionStorage(){
+const ajoutSessionStorage = () => {
     let panier = sessionStorage.getItem('panier')
     panier = JSON.parse(panier)
 
